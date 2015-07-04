@@ -75,7 +75,7 @@ def find_matching_note_off(track, noteOnEvent):
             continue
 
         # If it's before the tick of the NoteOn event, ignore it
-        if event.tick < noteOnEvent.tick:
+        if event.tick <= noteOnEvent.tick:
             continue
 
         # If it's a NoteOn event with a non-zero velocity, ignore it because this
